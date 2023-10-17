@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T12:40:30.520Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="1LMTQklXRyFn1__D2fr5" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-17T07:53:59.427Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="qU7oZ-S9s2LVQa03um4p" version="22.0.4" type="github">
   <diagram id="yPxyJZ8AM_hMuL3Unpa9" name="gitflow">
-    <mxGraphModel dx="1364" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1137" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,7 +76,7 @@
             <mxPoint x="370" y="180" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6" value="1.1.0" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" parent="1" vertex="1">
+        <mxCell id="6" value="1.0.1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" parent="1" vertex="1">
           <mxGeometry x="640" y="60" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="35" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="4" target="6" edge="1">
@@ -219,7 +219,7 @@
         <mxCell id="159" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="550" y="140" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="160" value="1.1.0" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FFB570;" parent="1" vertex="1">
+        <mxCell id="160" value="1.0.1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FFB570;" parent="1" vertex="1">
           <mxGeometry x="600" y="120" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="0Cqs4zG60hxrjccoM_Yq-203" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;labelBackgroundColor=default;strokeColor=#9673a6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#FFB570;endArrow=none;endFill=0;fillColor=#e1d5e7;" edge="1" parent="1" source="165" target="78">
@@ -287,6 +287,12 @@
         </mxCell>
         <mxCell id="0Cqs4zG60hxrjccoM_Yq-205" value="release-myf3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
           <mxGeometry x="324.66" y="50" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cqs4zG60hxrjccoM_Yq-208" value="&lt;h1 style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;h1&gt;Workflow&lt;/h1&gt;&lt;p&gt;Tags are made in the component repository, on main or stable-myfx branches. On tag we trigger a pipeline that will :&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;In component repository :&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;create release branch if the tag is on the main branch, Or a release-myfx if the tag is on stable-myfx branch.&lt;/li&gt;&lt;li&gt;checkout release (or release-myfx) branch and merge fast-forward main (or stable-myfx) branch.&lt;/li&gt;&lt;li&gt;create and trigger a release pipeline in domain_ci&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;In domain_ci repository&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;create release or release-myfx branch in domain_ci, if the branch does not exist.&lt;/li&gt;&lt;li&gt;for the team project, update the manifest.xml : in team projects update the revision to release or release-myfx&amp;nbsp;&lt;/li&gt;&lt;li&gt;create a schedule pipeline in domain_ci project for the re&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="660" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cqs4zG60hxrjccoM_Yq-209" value="Component" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="100" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
