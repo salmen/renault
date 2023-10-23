@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-20T10:26:24.589Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="FvOP-wbJFwDJ5yJW7S8-" version="22.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-23T08:54:22.099Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="r2WfWmLtiCkmDjc4gNIH" version="22.0.5" type="github" pages="2">
   <diagram id="yPxyJZ8AM_hMuL3Unpa9" name="gitflow">
-    <mxGraphModel dx="1137" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1364" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -288,12 +288,171 @@
         <mxCell id="0Cqs4zG60hxrjccoM_Yq-205" value="release-myf3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
           <mxGeometry x="324.66" y="50" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="0Cqs4zG60hxrjccoM_Yq-208" value="&lt;h1 style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;h1&gt;Workflow&lt;/h1&gt;&lt;p&gt;Tags are made in the component repository, on main or stable-myfx branches. On tag we trigger a pipeline that will :&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;In component repository :&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;create release branch if the tag is on the main branch, Or a release-myfx if the tag is on stable-myfx branch.&lt;/li&gt;&lt;li&gt;checkout release (or release-myfx) branch and merge fast-forward main (or stable-myfx) branch.&lt;/li&gt;&lt;li&gt;create and trigger a release pipeline in domain_ci&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;In domain_ci repository&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;create release or release-myfx branch in domain_ci, if the branch does not exist.&lt;/li&gt;&lt;li&gt;if release branch exists : merge stable/main&amp;nbsp;&lt;/li&gt;&lt;li&gt;update the manifest.xml : update the revision to release or release-myfx for the project&lt;/li&gt;&lt;li&gt;create a schedule pipeline in domain_ci project for the release&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" parent="1" vertex="1">
-          <mxGeometry x="60" y="390" width="720" height="360" as="geometry" />
+        <mxCell id="0Cqs4zG60hxrjccoM_Yq-208" value="&lt;h1 style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;h1&gt;Workflow&lt;/h1&gt;&lt;p&gt;Tags are made in the component repository, on main or stable-myfx branches. On tag, we trigger a pipeline that will :&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;In component project :&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;create release branch if the tag is on the main branch, Or a release-myfx if the tag is on stable-myfx branch.&lt;/li&gt;&lt;li&gt;checkout release (or release-myfx) branch and merge fast-forward main (or stable-myfx) branch.&lt;/li&gt;&lt;li&gt;trigger a pipeline in domain_ci&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;In domain_ci project&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;create release or release-myfx branch in domain_ci, if the branch does not exist.&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;update the manifest.xml : update the revision to release or release-myfx for the tagged project&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;create a schedule pipeline in domain_ci project for the release&lt;/li&gt;&lt;li&gt;run the schedule&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry y="570" width="720" height="360" as="geometry" />
         </mxCell>
         <mxCell id="0Cqs4zG60hxrjccoM_Yq-209" value="Component" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="20" y="10" width="100" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-366" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-401" target="ka2fryHVlHf1zdvt1wW3-368">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="410" as="sourcePoint" />
+            <mxPoint x="700" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-367" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-368" value="release-myfx" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="400" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-369" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-391" target="ka2fryHVlHf1zdvt1wW3-370">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="520" as="targetPoint" />
+            <mxPoint x="950" y="520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-370" value="main" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="510" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-371" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fontSize=10;fontColor=#FFB570;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-372" target="ka2fryHVlHf1zdvt1wW3-386">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-372" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="369.97" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-373" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-374" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-367" target="ka2fryHVlHf1zdvt1wW3-373">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="29.9999999999917" y="410" as="sourcePoint" />
+            <mxPoint x="670" y="410" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-375" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fontSize=10;fontColor=#FFB570;fillColor=#ffe6cc;strokeColor=#d79b00;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-386" target="ka2fryHVlHf1zdvt1wW3-373">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="470" />
+              <mxPoint x="610" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-376" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#FFB570;" vertex="1" parent="1">
+          <mxGeometry x="500" y="460" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-377" value="stable-myfx" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="460" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-378" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-372" target="ka2fryHVlHf1zdvt1wW3-379">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="500" as="targetPoint" />
+            <mxPoint x="440" y="500" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-379" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="644.97" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-380" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" target="ka2fryHVlHf1zdvt1wW3-389">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-381" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelBackgroundColor=none;labelBorderColor=none;fontColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="730" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-382" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-379" target="ka2fryHVlHf1zdvt1wW3-381">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="500" as="targetPoint" />
+            <mxPoint x="650" y="500" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-383" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FFB570;" vertex="1" parent="1">
+          <mxGeometry x="580" y="460" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-384" value="stable-myf3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="279.97" y="450" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-385" value="" style="endArrow=none;dashed=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-367" target="ka2fryHVlHf1zdvt1wW3-386">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="420" as="sourcePoint" />
+            <mxPoint x="630" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-386" value="" style="ellipse;html=1;aspect=fixed;fontSize=10;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#FFB570;fontStyle=1;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="394.65999999999997" y="460" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-387" value="release" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="427" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-388" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-395">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="644.97" y="436.58000000000004" as="sourcePoint" />
+            <mxPoint x="1130" y="437" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-389" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="760" y="427" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-390" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-381" target="ka2fryHVlHf1zdvt1wW3-391">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1130" y="520" as="targetPoint" />
+            <mxPoint x="750" y="520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-391" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="860" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-392" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;strokeColor=#82b366;fillColor=#d5e8d4;dashed=1;endFill=0;curved=1;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-393" target="ka2fryHVlHf1zdvt1wW3-395">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-393" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelBackgroundColor=none;labelBorderColor=none;fontColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-394" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-389" target="ka2fryHVlHf1zdvt1wW3-395">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="437" as="sourcePoint" />
+            <mxPoint x="1134.97" y="436.58000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-395" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="427" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-396" value="release-myf3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="304.66" y="390" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-397" value="Domain_CI" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-398" value="&lt;h1 style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Actions&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;Project team :&amp;nbsp;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;rename mainline default branch to &quot;main&quot; in both, component and domain_ci, repositroies&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;rename myfx_release to stable_myfx&lt;/span&gt;In domain_ci project&lt;/li&gt;&lt;li&gt;modify .gitlab_ci.yml in component project&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;System team :&amp;nbsp;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;in domain_ci add protected branches release*&lt;/li&gt;&lt;li&gt;configure TRIGGER_TOKEN variable in component level (Should we use nestor token ? or do we need a dedicated token )&lt;/li&gt;&lt;li&gt;configure ACCESS_TOKEN with maintainer role in domain_ci to make api calls&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="760" y="570" width="720" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-399" value="update revision for the tagged component to release-myf3 in manifest.xml&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="340" width="214.66" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-402" value="" style="endArrow=none;dashed=1;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ka2fryHVlHf1zdvt1wW3-373" target="ka2fryHVlHf1zdvt1wW3-401">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="410" as="sourcePoint" />
+            <mxPoint x="1130" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ka2fryHVlHf1zdvt1wW3-401" value="update revision for the tagged component to release in manifest.xml" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="662.67" y="385" width="214.66" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OnYiE91IHKTmuiJ7vqjA" name="Page-2">
+    <mxGraphModel dx="1364" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
