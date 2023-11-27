@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-27T14:43:59.930Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="-oZjy8pyUydRPtF0euYw" version="22.1.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-11-27T14:45:10.547Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76" etag="hCubkjEF1vw_SrVlM1vr" version="22.1.4" type="github" pages="4">
   <diagram id="yPxyJZ8AM_hMuL3Unpa9" name="gitflow">
     <mxGraphModel dx="2214" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1049,10 +1049,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="qgYu-cR_Me6EohLr5Clw-208" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
-          <mxGeometry x="1276" y="-260" width="20" height="220" as="geometry" />
+          <mxGeometry x="1276" y="-260" width="20" height="190" as="geometry" />
         </mxCell>
         <mxCell id="qgYu-cR_Me6EohLr5Clw-209" value="Managed by component&lt;br&gt;&amp;nbsp;developpers" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1310" y="-170" width="150" height="40" as="geometry" />
+          <mxGeometry x="1292" y="-187" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dx6nrJI4djwBMw3k_C7e-199" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;strokeColor=#d79b00;dashed=1;endFill=0;fillColor=#ffe6cc;" edge="1" parent="1" source="qgYu-cR_Me6EohLr5Clw-219" target="dx6nrJI4djwBMw3k_C7e-197">
           <mxGeometry relative="1" as="geometry" />
